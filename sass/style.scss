@@ -3,7 +3,7 @@
 $default-color: rgb(52, 52, 52);
 $default-padding: 30px;
 $default-hover-color: #0ba6ff;
-
+$hamberger-nav-color: #f5f5f5;
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -37,10 +37,86 @@ h3 {
 @mixin default_section_model {
   border: 3px solid #e0e0e0;
   border-radius: 20px;
-  background-color: #f5f5f5;
+  background-color: $hamberger-nav-color;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.overlay {
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+.burger-menu {
+  display: none;
+  position: fixed;
+  background-color: $default-color;
+  height: 100vh;
+  z-index: 10;
+  width: 0;
+  box-sizing: border-box;
+  animation: animated-menu 0.2s linear forwards;
+  div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    cursor: pointer;
+    svg {
+      &:hover {
+        fill: #a0a0a0;
+      }
+    }
+  }
+
+  nav {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    visibility: hidden;
+    scale: 0.8;
+    animation: hamburger-links 0.1s linear 0.2s forwards;
+    #burger-links {
+      display: flex;
+      column-gap: 5px;
+      a {
+        fill: $hamberger-nav-color;
+        &:hover {
+          fill: $default-hover-color;
+        }
+      }
+    }
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: $hamberger-nav-color;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      &:hover {
+        color: $default-hover-color;
+      }
+    }
+  }
+}
+@keyframes animated-menu {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes hamburger-links {
+  to {
+    visibility: visible;
+    scale: 1;
+  }
 }
 header {
   display: flex;
@@ -54,10 +130,9 @@ header {
   box-sizing: border-box;
   color: $default-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 100;
+  z-index: 3;
   h1 {
-    font-size: 1.5rem;
-    cursor: pointer;
+    font-size: 1.6rem;
   }
   nav {
     display: flex;
@@ -72,6 +147,9 @@ header {
         color: $default-hover-color;
       }
     }
+  }
+  div {
+    display: none;
   }
 }
 section {
@@ -434,6 +512,24 @@ footer {
   }
 }
 @media (max-width: 800px) {
+  header {
+    padding: 10px 30px 10px 30px;
+
+    nav {
+      display: none;
+    }
+    div {
+      display: block;
+      scale: 0.7;
+      fill: $default-color;
+      cursor: pointer;
+      transition: 0.4s linear;
+
+      &:hover {
+        fill: $default-hover-color;
+      }
+    }
+  }
   section {
     padding: 0 10%;
   }
@@ -455,11 +551,6 @@ footer {
   }
 }
 @media (max-width: 630px) {
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-right: 40px;
-  }
   #main-section {
     padding-top: 10%;
   }
@@ -500,10 +591,15 @@ footer {
     padding-left: 30px;
     padding-right: 30px;
   }
-  header nav {
-    column-gap: 12px;
-  }
 
+  header {
+    h1 {
+      font-size: 1.3rem;
+    }
+    div {
+      scale: 0.6;
+    }
+  }
   #list-of-projects,
   #list-of-projects img,
   .project-articles img,
