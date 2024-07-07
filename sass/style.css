@@ -47,14 +47,13 @@ h3 {
 }
 
 .burger-menu {
-  display: none;
+  display: block;
   position: fixed;
   background-color: rgb(52, 52, 52);
   height: 100vh;
   z-index: 10;
   width: 0;
   box-sizing: border-box;
-  animation: animated-menu 0.2s linear forwards;
 }
 .burger-menu div {
   display: flex;
@@ -65,7 +64,7 @@ h3 {
 .burger-menu div svg:hover {
   fill: #a0a0a0;
 }
-.burger-menu nav {
+.burger-menu .burger-navigation {
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -74,30 +73,37 @@ h3 {
   row-gap: 20px;
   visibility: hidden;
   scale: 0.8;
-  animation: hamburger-links 0.1s linear 0.2s forwards;
 }
-.burger-menu nav #burger-links {
+.burger-menu .burger-navigation #burger-links {
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
-.burger-menu nav #burger-links a {
+.burger-menu .burger-navigation #burger-links a {
   fill: #f5f5f5;
 }
-.burger-menu nav #burger-links a:hover {
+.burger-menu .burger-navigation #burger-links a:hover {
   fill: #0ba6ff;
 }
-.burger-menu nav a {
+.burger-menu .burger-navigation a {
   cursor: pointer;
   text-decoration: none;
   color: #f5f5f5;
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
-.burger-menu nav a:hover {
+.burger-menu .burger-navigation a:hover {
   color: #0ba6ff;
 }
 
+@keyframes cancelBtnAnimation {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 @keyframes animated-menu {
   0% {
     width: 0;
