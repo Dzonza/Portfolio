@@ -10,15 +10,17 @@ const navLink3 = document.querySelector('.link3');
 const navLink4 = document.querySelector('.link4');
 const cancelBtn = document.querySelector('.cancel-btn');
 const overlay = document.querySelector('.overlay');
-
+const navigation = document.querySelector('.burger-navigation');
 const cancelBurgerMenu = () => {
-  burgerMenu.style.display = 'none';
+  burgerMenu.style.animation = 'cancelBtnAnimation 0.2s linear forwards';
   overlay.style.position = 'static';
+  navigation.style.animation = '';
 };
 document.addEventListener('DOMContentLoaded', function () {
   burgerMenuBtn.addEventListener('click', () => {
-    burgerMenu.style.display = 'block';
+    burgerMenu.style.animation = 'animated-menu 0.2s linear forwards';
     overlay.style.position = 'fixed';
+    navigation.style.animation = 'hamburger-links 0.1s linear 0.2s forwards';
   });
   cancelBtn.addEventListener('click', () => cancelBurgerMenu());
   overlay.addEventListener('click', () => cancelBurgerMenu());
