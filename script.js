@@ -13,12 +13,14 @@ const overlay = document.querySelector('.overlay');
 const navigation = document.querySelector('.burger-navigation');
 const cancelBurgerMenu = () => {
   burgerMenu.style.animation = 'cancelBtnAnimation 0.2s linear forwards';
+  cancelBtn.style.display = 'none';
   overlay.style.position = 'static';
   navigation.style.animation = '';
 };
 document.addEventListener('DOMContentLoaded', function () {
   burgerMenuBtn.addEventListener('click', () => {
     burgerMenu.style.animation = 'animated-menu 0.2s linear forwards';
+    cancelBtn.style.display = 'flex';
     overlay.style.position = 'fixed';
     navigation.style.animation = 'hamburger-links 0.1s linear 0.2s forwards';
   });

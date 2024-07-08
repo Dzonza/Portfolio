@@ -52,14 +52,13 @@ h3 {
   backdrop-filter: blur(3px);
 }
 .burger-menu {
-  display: block;
   position: fixed;
   background-color: $default-color;
   height: 100vh;
   z-index: 10;
   width: 0;
   box-sizing: border-box;
-  div {
+  .cancel-btn {
     display: flex;
     justify-content: flex-end;
     padding: 10px;

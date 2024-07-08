@@ -47,7 +47,6 @@ h3 {
 }
 
 .burger-menu {
-  display: block;
   position: fixed;
   background-color: rgb(52, 52, 52);
   height: 100vh;
@@ -55,13 +54,13 @@ h3 {
   width: 0;
   box-sizing: border-box;
 }
-.burger-menu div {
+.burger-menu .cancel-btn {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
   cursor: pointer;
 }
-.burger-menu div svg:hover {
+.burger-menu .cancel-btn svg:hover {
   fill: #a0a0a0;
 }
 .burger-menu .burger-navigation {
