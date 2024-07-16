@@ -161,23 +161,11 @@ section {
   background: linear-gradient(-45deg, #e6b8aa, #ecbfd0, #a1dbf0, #9df0dc);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 20%;
-  --mask: radial-gradient(
-        178.89px at 50% calc(100% - 240px),
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% - 160px) 0/320px 100%,
-    radial-gradient(178.89px at 50% calc(100% + 160px), #0000 99%, #000 101%)
-      50% calc(100% - 80px) / 320px 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
 @keyframes gradient {
@@ -300,8 +288,8 @@ section {
 }
 
 .all-sections {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 h2 {
@@ -465,15 +453,9 @@ footer div a:hover {
   }
 }
 @media (max-width: 2000px) {
-  #main-section {
-    height: 100%;
-  }
-  #main-article {
-    scale: 0.9;
-  }
+  #main-article,
   #tech-stack {
     scale: 0.9;
-    margin-bottom: 100px;
   }
 }
 @media (max-width: 1450px) {
@@ -497,6 +479,9 @@ footer div a:hover {
     grid-template-rows: 1fr 1fr;
     padding: 30px;
     row-gap: 20px;
+  }
+  #main-section {
+    height: auto;
   }
   #main-title {
     text-align: center;
@@ -548,6 +533,12 @@ footer div a:hover {
   }
   #about h2 {
     margin-bottom: 60px;
+  }
+}
+@media (max-width: 900px) {
+  #main-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 800px) {
@@ -639,6 +630,7 @@ footer div a:hover {
     width: 100%;
   }
   #main-section {
+    height: auto;
     padding: 60px 10px 30px 10px;
   }
   #main-article {
