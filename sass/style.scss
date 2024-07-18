@@ -199,7 +199,7 @@ section {
 
 #main-article {
   @include default_section_model();
-  margin: 15% 0 10% 0;
+  margin: 15% 0 5% 0;
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 1fr;
@@ -222,6 +222,7 @@ section {
   justify-content: center;
   column-gap: 3%;
   padding: 15px 30px;
+  animation: moveUpBox 1s ease-out 0.7s backwards;
   p {
     display: flex;
     padding: 0 20px;
@@ -241,13 +242,24 @@ section {
     }
   }
 }
-
+@keyframes moveUpBox {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 #profile-image {
   padding: $default-padding;
   img {
     border-radius: 90% 23% 66% 44%;
     animation: border-profile-image 10s ease-in-out infinite;
-    border: 4px solid $default-color;
     max-width: 300px;
     max-height: 300px;
   }
