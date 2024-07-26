@@ -499,6 +499,9 @@ footer div a:hover {
   }
 }
 @media (max-width: 1450px) {
+  section {
+    padding: 0 15%;
+  }
   #about article {
     grid-template-columns: 1fr;
     grid-template-rows: 40% 60%;
@@ -514,6 +517,9 @@ footer div a:hover {
   }
 }
 @media (max-width: 1180px) {
+  section {
+    padding: 0 20%;
+  }
   #main-article {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;

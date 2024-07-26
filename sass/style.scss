@@ -310,6 +310,7 @@ section {
 h2 {
   color: $default-hover-color;
 }
+
 #about article {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -354,6 +355,7 @@ h2 {
   padding: 30px 50px;
   justify-content: space-between;
   transition: 0.3s linear;
+
   &:hover {
     scale: 1.02;
   }
@@ -471,6 +473,9 @@ footer {
   }
 }
 @media (max-width: 1450px) {
+  section {
+    padding: 0 15%;
+  }
   #about article {
     grid-template-columns: 1fr;
     grid-template-rows: 40% 60%;
@@ -486,6 +491,9 @@ footer {
   }
 }
 @media (max-width: 1180px) {
+  section {
+    padding: 0 20%;
+  }
   #main-article {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
