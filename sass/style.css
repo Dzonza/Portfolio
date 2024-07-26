@@ -392,10 +392,35 @@ h2 {
 .project-articles a:hover {
   color: #0ba6ff;
 }
-.project-articles img {
+.project-articles .img-section {
+  position: relative;
+  cursor: pointer;
+}
+.project-articles .img-section img {
   border-radius: 10px;
   border: 2px solid #e0e0e0;
   max-height: 200px;
+  transition: all 0.5s;
+}
+.project-articles .img-section .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.project-articles .img-section:hover img {
+  transform: scale(0.9);
+  filter: blur(2.5px) brightness(80%);
+}
+.project-articles .img-section:hover .caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
 .article-centering {
