@@ -595,11 +595,11 @@ footer div a:hover {
     padding: 30px;
     justify-content: center;
   }
-  .project-articles img {
+  .project-articles .img-section {
     order: -1;
     margin-bottom: 20px;
   }
-  .project-articles div a {
+  .project-articles .article-centering > a {
     padding-left: 20px;
   }
   #about h2 {
