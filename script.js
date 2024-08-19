@@ -32,10 +32,10 @@ const cancelBurgerMenu = () => {
 };
 document.addEventListener('DOMContentLoaded', function () {
   burgerMenuBtn.addEventListener('click', () => {
-    burgerMenu.style.animation = 'animated-menu 0.2s linear forwards';
+    burgerMenu.style.animation = 'animatedMenu 0.2s linear forwards';
     cancelBtn.style.display = 'flex';
     overlay.style.position = 'fixed';
-    navigation.style.animation = 'hamburger-links 0.1s linear 0.2s forwards';
+    navigation.style.animation = 'hamburgerLinks 0.1s linear 0.2s forwards';
   });
   cancelBtn.addEventListener('click', () => cancelBurgerMenu());
   overlay.addEventListener('click', () => cancelBurgerMenu());
