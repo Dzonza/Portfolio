@@ -119,8 +119,10 @@
         <article>
           <img src="assets/programming avatar.jpg" alt="programming avatar" />
           <div>
-            <h3>Front-End Web Developer 👋</h3>
-            <p>
+            <h3 class="about-me-title" data-animation="about-title">
+              Front-End Web Developer 👋
+            </h3>
+            <p class="about-me-text" data-animation="about-text">
               I am a passionate web developer with a strong foundation in
               JavaScript, HTML, and CSS. I love creating interactive and
               visually appealing user experiences and am currently expanding my
@@ -138,7 +140,7 @@
       <section id="projects" class="all-sections">
         <h2>Projects</h2>
         <div id="list-of-projects">
-          <article class="project-articles">
+          <article class="project-articles" data-animation="projects-left">
             <div class="projects-odd article-centering">
               <h3>WeatherZen</h3>
               <p>App that generates weather details for your desired city.</p>
@@ -153,7 +155,7 @@
               </a>
             </div>
           </article>
-          <article class="project-articles">
+          <article class="project-articles" data-animation="projects-left">
             <div class="img-section">
               <a href="https://todo-project-hfgd.onrender.com" target="_blank">
                 <img src="assets/ToDo.png" alt="To do Project" />
@@ -168,7 +170,7 @@
               </a>
             </div>
           </article>
-          <article class="project-articles">
+          <article class="project-articles" data-animation="projects-left">
             <div class="projects-odd article-centering">
               <h3>Blog</h3>
               <p>My first blog project using Javascript.</p>
@@ -183,7 +185,7 @@
               </a>
             </div>
           </article>
-          <article class="project-articles">
+          <article class="project-articles" data-animation="projects-left">
             <div class="img-section">
               <a href="https://github.com/Dzonza/Blog-project" target="_blank">
                 <img
@@ -205,13 +207,18 @@
       </section>
       <section id="contact" class="all-sections">
         <h2>Contact</h2>
-        <p>Let's keep in touch! 👇</p>
+        <p class="contact-animation-title" data-animation="contact-move-up">
+          Let's keep in touch! 👇
+        </p>
         <div id="contact-link">
           <article>
             <div class="contact-image">
               <img src="assets/icons8-email-48.png" alt="email" />
             </div>
-            <div class="contact-details">
+            <div
+              class="contact-details contact-animation-details"
+              data-animation="contact-move-up"
+            >
               <p class="contact-title">Email:</p>
               <a href="mailto:test@test.com">Click here</a>
             </div>
@@ -220,7 +227,10 @@
             <div class="contact-image">
               <img src="assets/icons8-location-48.png" alt="location" />
             </div>
-            <div>
+            <div
+              class="contact-animation-details"
+              data-animation="contact-move-up"
+            >
               <p class="contact-title">Location:</p>
               <p class="contact-city">Belgrade, Serbia</p>
             </div>
@@ -266,5 +276,6 @@
       </div>
     </footer>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scrollAnimation.js"></script>
   </body>
 </html>

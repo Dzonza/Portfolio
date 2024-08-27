@@ -310,6 +310,34 @@ h2 {
   color: $default-hover-color;
 }
 
+@mixin about-section-scroll($moveX) {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY($moveX);
+  transition: 0.3s ease-in;
+}
+.about-me-title,
+.about-me-text,
+.project-articles,
+.contact-animation-title,
+.contact-animation-details {
+  @include about-section-scroll(5rem);
+}
+.contact-animation-details {
+  transition-delay: 0.2s;
+}
+.about-me-text {
+  transition-delay: 0.2s;
+}
+.about-title,
+.about-text,
+.projects-left,
+.contact-move-up {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
 #about article {
   display: grid;
   grid-template-columns: 1fr 1fr;
