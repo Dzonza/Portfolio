@@ -116,20 +116,28 @@ h3 {
     scale: 1;
   }
 }
-header {
-  display: flex;
-  padding: 10px 70px 10px 40px;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
+#scroll-marker {
+  position: absolute;
+  top: 100px;
+}
+
+.header-scroll {
   background: rgba(244, 173, 234, 0.15);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  box-sizing: border-box;
-  color: rgb(52, 52, 52);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header {
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 3;
+  padding: 10px 70px 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(52, 52, 52);
   animation: moveDownBox 1s ease-out 0.7s backwards;
 }
 header h1 {
@@ -330,15 +338,15 @@ h2 {
   opacity: 0;
   filter: blur(10px);
   transform: translateY(5rem);
-  transition: 0.3s ease-in;
+  transition: 0.4s ease;
 }
 
 .contact-animation-details {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .about-me-text {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .about-title,
@@ -561,6 +569,7 @@ footer div a:hover {
   #about article {
     grid-template-columns: 1fr;
     grid-template-rows: 40% 60%;
+    text-align: center;
   }
   #profile-image {
     padding-right: 0;
