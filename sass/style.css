@@ -42,7 +42,7 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .burger-menu {
@@ -75,7 +75,7 @@ h3 {
 .burger-menu .burger-navigation #burger-links {
   display: flex;
   -moz-column-gap: 5px;
-       column-gap: 5px;
+  column-gap: 5px;
 }
 .burger-menu .burger-navigation #burger-links a {
   fill: #f5f5f5;
@@ -93,7 +93,6 @@ h3 {
 .burger-menu .burger-navigation a:hover {
   color: #0ba6ff;
 }
-
 @keyframes cancelBtnAnimation {
   0% {
     width: 70%;
@@ -124,7 +123,7 @@ h3 {
 .header-scroll {
   background: rgba(244, 173, 234, 0.15);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -160,7 +159,6 @@ header nav a:hover {
 header div {
   display: none;
 }
-
 @keyframes moveDownBox {
   0% {
     opacity: 0;
@@ -179,16 +177,19 @@ section {
 }
 
 #main-section {
-  background: linear-gradient(-45deg, #e6b8aa, #ecbfd0, #a1dbf0, #9df0dc);
-  background-size: 400% 400%;
+  padding-bottom: 10%;
+  background-color: #92c7cf;
+  background-image: radial-gradient(at 20% 25%, #fbf9f1 0px, transparent 50%), radial-gradient(at 89% 95%, #e5e1da 0px, transparent 50%);
+  background-size: 200% 200%;
   animation: gradient 20s ease infinite;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
 }
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -225,11 +226,10 @@ section {
   align-items: center;
   grid-template-columns: 2fr 1fr;
   -moz-column-gap: 5%;
-       column-gap: 5%;
+  column-gap: 5%;
   animation: mainContent 4s ease-out infinite;
   box-sizing: border-box;
 }
-
 @keyframes mainContent {
   0% {
     transform: translateY(0%);
@@ -247,7 +247,7 @@ section {
   align-items: center;
   justify-content: center;
   -moz-column-gap: 3%;
-       column-gap: 3%;
+  column-gap: 3%;
   padding: 15px 30px;
   animation: moveUpBox 1s ease-out 0.7s backwards;
 }
@@ -260,7 +260,7 @@ section {
 #tech-stack div {
   display: flex;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   padding: 10px 15px;
 }
 #tech-stack div img {
@@ -270,7 +270,6 @@ section {
   cursor: pointer;
   transform: scale(1.2);
 }
-
 @keyframes moveUpBox {
   0% {
     opacity: 0;
@@ -293,7 +292,6 @@ section {
   max-width: 300px;
   max-height: 300px;
 }
-
 @keyframes borderProfileImage {
   0% {
     border-radius: 90% 23% 66% 44%;
@@ -311,7 +309,7 @@ section {
 #links {
   display: flex;
   -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 #links a {
   transition: 0.4s linear;
@@ -379,7 +377,10 @@ h2 {
 }
 
 #projects {
+  -webkit-clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
   background-color: rgba(241, 241, 241, 0.8431372549);
+  padding-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -482,7 +483,7 @@ h2 {
   display: flex;
   flex-direction: row;
   -moz-column-gap: 60px;
-       column-gap: 60px;
+  column-gap: 60px;
 }
 #contact-link article {
   display: flex;
@@ -496,7 +497,6 @@ h2 {
 .contact-image {
   animation: contactIcons 3.5s ease-in-out infinite;
 }
-
 @keyframes contactIcons {
   0% {
     transform: translateY(0%);
@@ -565,6 +565,9 @@ footer div a:hover {
 @media (max-width: 1450px) {
   section {
     padding: 0 15%;
+  }
+  #projects {
+    padding-top: 150px;
   }
   #about article {
     grid-template-columns: 1fr;
@@ -649,7 +652,7 @@ footer div a:hover {
 @media (max-width: 900px) {
   #main-section {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 800px) {
@@ -691,6 +694,12 @@ footer div a:hover {
 @media (max-width: 630px) {
   #main-section {
     padding-top: 10%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+  }
+  #projects {
+    -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
   }
   #tech-stack {
     padding: 20px 0;
@@ -742,7 +751,7 @@ footer div a:hover {
   }
   #main-section {
     height: auto;
-    padding: 60px 10px 30px 10px;
+    padding: 60px 10px 60px 10px;
   }
   #main-article {
     box-sizing: border-box;
