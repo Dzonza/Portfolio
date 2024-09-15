@@ -409,6 +409,7 @@ h2 {
   padding: 30px 50px;
   justify-content: space-between;
   transition: 0.3s linear;
+  backface-visibility: hidden;
 }
 .project-articles:hover {
   scale: 1.02;
