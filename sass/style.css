@@ -137,6 +137,7 @@ header {
   display: flex;
   justify-content: space-between;
   color: rgb(52, 52, 52);
+  transition: all 0.3s;
   animation: moveDownBox 1s ease-out 0.7s backwards;
 }
 header h1 {

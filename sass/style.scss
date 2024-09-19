@@ -167,9 +167,8 @@ header {
   display: flex;
   justify-content: space-between;
   color: $default-color;
-
+  transition: all 0.3s;
   -webkit-animation: moveDownBox 1s ease-out 0.7s backwards;
-
   animation: moveDownBox 1s ease-out 0.7s backwards;
   h1 {
     font-size: 1.5rem;
