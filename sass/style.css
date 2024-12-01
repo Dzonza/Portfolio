@@ -265,7 +265,7 @@ section {
   padding: 10px 15px;
 }
 #tech-stack div img {
-  transition: 0.4s linear;
+  transition: 0.3s linear;
 }
 #tech-stack div img:hover {
   cursor: pointer;
