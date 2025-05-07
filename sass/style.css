@@ -401,6 +401,14 @@ h2 {
   box-sizing: border-box;
 }
 
+.link-to-project {
+  margin-top: 16px;
+}
+
+.services-language-image {
+  height: 30px;
+}
+
 .project-articles {
   border: 3px solid #e0e0e0;
   border-radius: 20px;

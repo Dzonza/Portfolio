@@ -490,6 +490,12 @@ h2 {
   gap: 50px;
   box-sizing: border-box;
 }
+.link-to-project {
+  margin-top: 16px;
+}
+.services-language-image {
+  height: 30px;
+}
 .project-articles {
   @include defaultSectionModel();
   display: flex;
