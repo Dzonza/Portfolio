@@ -753,8 +753,7 @@ footer div a:hover {
     scale: 0.6;
   }
   #list-of-projects,
-  #list-of-projects img,
-  .project-articles img,
+  .project-articles div a img,
   #main-article,
   #profile-image img {
     width: 100%;

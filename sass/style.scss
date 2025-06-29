@@ -580,6 +580,7 @@ h2 {
   article {
     display: flex;
     align-items: center;
+
     gap: 30px;
     a {
       text-decoration: none;
@@ -854,8 +855,7 @@ footer {
     }
   }
   #list-of-projects,
-  #list-of-projects img,
-  .project-articles img,
+  .project-articles div a img,
   #main-article,
   #profile-image img {
     width: 100%;
